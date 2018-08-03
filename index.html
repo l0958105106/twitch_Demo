@@ -2,29 +2,12 @@
 <html lang="en">
 <head>
     <title>twitch_Demo</title>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="index.css"></link>
 </head>
 <body>
     <div class="container">
-
     </div>
-    <script>
-        console.log("begin");
-        $.ajax({
-			type: 'GET',
-			url: 'https://api.twitch.tv/kraken/streams/',
-			headers: {
-				'Client-ID': 'j57loptgkgakodmowbvqbqu92a61jy'
-			},
-	        error: function(){
-		        console.log('error');
-	        },
-            success: function(channel){
-                console.log("Results:");
-                console.log(channel);
-            }
-            });
-            console.log("end");
-    </script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
