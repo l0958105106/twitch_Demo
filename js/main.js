@@ -18,7 +18,6 @@ $(document).ready(function () {
         </a>`;
         $( ".container" ).append(content);
       }
-      console.log(data);
     },
     error: function(data) {
       console.log('error', data);
