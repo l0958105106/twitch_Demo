@@ -40,14 +40,10 @@ body {
   filter: contrast(125%) brightness(150%); 
 }
 
-#special {
-  transition-delay: 1s; 
-}
-
 .preview {
   box-sizing: border-box;
   display: block;
-  width: 300px; 
+  width: 330px; 
 }
 
 .content {
@@ -75,7 +71,7 @@ body {
 .stream-text {
   box-sizing: border-box;
   width: 230px;
-  margin-left: 5px; }
+  margin-left: 35px; }
   .stream-text p {
     color: #FFF5EE;
     font-size: 15px;
@@ -88,10 +84,10 @@ body {
   }
 
 h1 {
-  text-align:center;
+  text-align: center;
   color: #FFFFFF;
 }
 
 .btnControl{
-  text-align:center;
+  text-align: center;
 }
