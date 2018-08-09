@@ -13,6 +13,16 @@ body {
   background-attachment: fixed; 
 }
 
+.page-header h1 {
+  font-style: normal;
+  color: white;
+  text-align: center;
+  }
+
+.btnControl{
+  text-align: center;
+}
+
 .container {
   box-sizing: border-box;
   display: -webkit-flex;
@@ -43,7 +53,7 @@ body {
 .preview {
   box-sizing: border-box;
   display: block;
-  width: 330px; 
+  width: 300px; 
 }
 
 .content {
@@ -70,9 +80,11 @@ body {
 
 .stream-text {
   box-sizing: border-box;
-  width: 230px;
-  margin-left: 35px; }
-  .stream-text p {
+  width: 200px;
+  margin-left: 35px; 
+}
+
+.stream-text p {
     color: #FFF5EE;
     font-size: 15px;
     line-height: 25px;
@@ -82,12 +94,3 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
-
-h1 {
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.btnControl{
-  text-align: center;
-}

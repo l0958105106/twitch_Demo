@@ -8,7 +8,6 @@ $(document).ready(function (){
       dataType: 'json', 
       type: 'GET',
       success: function(data) {
-        console.log(data);
         $(".container").empty();
         for(let i = 0; i < 21; i++) {
           let content =
