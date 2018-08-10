@@ -17,10 +17,16 @@ body {
   font-style: normal;
   color: white;
   text-align: center;
+  font-size: 40px;
   }
 
-.btnControl{
+.btnControl {
   text-align: center;
+}
+
+.btnControl #btnZh, #btnKo, #btnEn {
+  border-radius: 12px;
+  font-size: 20px;
 }
 
 .container {
