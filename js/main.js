@@ -1,7 +1,7 @@
 $(document).ready(function (){
   let lang_ko = 'https://api.twitch.tv/kraken/streams/?language=ko&game=League%20of%20Legends';
   let lang_tw = 'https://api.twitch.tv/kraken/streams/?language=zh-tw&game=League%20of%20Legends';
-  let lang_en = 'https://api.twitch.tv/kraken/streams/?language=en&ame=League%20of%20Legends';
+  let lang_en = 'https://api.twitch.tv/kraken/streams/?language=en&game=League%20of%20Legends';
   let getAjax = function(language){
     $.ajax({
       url: language,
