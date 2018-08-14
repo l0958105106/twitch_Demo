@@ -1,18 +1,17 @@
 $(document).ready(function (){
-  let lang_ko = 'https://api.twitch.tv/kraken/streams/?language=ko&game=League%20of%20Legends';
-  let lang_tw = 'https://api.twitch.tv/kraken/streams/?language=zh-tw&game=League%20of%20Legends';
-  let lang_en = 'https://api.twitch.tv/kraken/streams/?language=en&game=League%20of%20Legends';
-  let getAjax = function(language){
+  var lang_ko = 'https://api.twitch.tv/kraken/streams/?language=ko&game=League%20of%20Legends';
+  var lang_tw = 'https://api.twitch.tv/kraken/streams/?language=zh-tw&game=League%20of%20Legends';
+  var lang_en = 'https://api.twitch.tv/kraken/streams/?language=en&game=League%20of%20Legends';
+  var getAjax = function(language){
     $.ajax({
       url: language,
       headers: {'Client-ID': 'j57loptgkgakodmowbvqbqu92a61jy'},
       dataType: 'json', 
       type: 'GET',
       success: function(data) {
-        console.log(data);
         $(".container").empty();
-        for(let i = 0; i < 21; i++) {
-          let content =
+        for(var i = 0; i < 21; i++) {
+          var content =
           `<a href="${data.streams[i].channel.url}" class='stream-item'>
             <img class='preview' src="${data.streams[i].preview.medium}">
               <div class='content'>
@@ -31,13 +30,13 @@ $(document).ready(function (){
         }
       });
     }
-  $("#btnZh").click(function (){
+  $("#btnZh").click(function () {
     getAjax(lang_tw);
   });
-  $("#btnKo").click(function (){
+  $("#btnKo").click(function () {
     getAjax(lang_ko);
   });
-  $("#btnEn").click(function (){
+  $("#btnEn").click(function () {
     getAjax(lang_en);
   });
   window.onload = getAjax(lang_tw);
