@@ -12,6 +12,8 @@ $(document).ready(function (){
         $(".container").empty();
         for(var i = 0; i < 21; i++) {
           var content =
+            "<a href=\"" + data.streams[i].channel.url + "\" class='stream-item'>\n            <img class='preview' src=\"" + data.streams[i].preview.medium + "\">\n              <div class='content'>\n                <img class='avatar' src=\"" + data.streams[i].channel.logo + "\">\n                  <div class='stream-text'>\n                  <p class='title'>" + data.streams[i].channel.status + "</p>\n                  <p class='streamer'>" + data.streams[i].channel.display_name + "</p>\n                </div>\n              </div>\n            </a>";
+          /* ie is not support
           `<a href="${data.streams[i].channel.url}" class='stream-item'>
             <img class='preview' src="${data.streams[i].preview.medium}">
               <div class='content'>
@@ -22,6 +24,8 @@ $(document).ready(function (){
                 </div>
               </div>
             </a>`;
+            */
+           
           $(".container").append(content);
         }
       },
