@@ -27,13 +27,8 @@ body {
   }
 
 .btnControl {
-  text-align: center;
-}
-
-.btnControl #btnZh, #btnKo, #btnEn {
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  font-size: 20px;
+  display: table; 
+  margin: 0 auto;
 }
 
 .container {
@@ -47,7 +42,7 @@ body {
 }
 
 .stream-item {
-  margin: 3% ;
+  margin: 2% ;
   transition: box-shadow .25s, -webkit-filter .5s;
   transition: box-shadow .25s, filter .5s;
   transition: box-shadow .25s, filter .5s, -webkit-filter .5s; 
@@ -61,15 +56,11 @@ body {
 }
 
 .preview {
-  box-sizing: border-box;
   display: flex;
-  width: 350px;
 }
 
 .content {
-  box-sizing: border-box;
   display: flex;
-  width: 350px;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color .25s; 
 }
@@ -79,7 +70,6 @@ body {
 }
 
 .avatar {
-  box-sizing: border-box;
   opacity: .75;
   width: 45px;
   height: 45px;
@@ -88,7 +78,6 @@ body {
 }
 
 .stream-text {
-  box-sizing: border-box;
   width: 200px;
   margin-left: 35px; 
 }
@@ -103,3 +92,4 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
+
