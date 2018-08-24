@@ -5,6 +5,12 @@ html, body {
   padding: 0; 
 }
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/swim.jpg);
   background-size: cover;
@@ -26,8 +32,8 @@ body {
 
 .btnControl #btnZh, #btnKo, #btnEn {
   border-radius: 12px;
+  -webkit-border-radius: 12px;
   font-size: 20px;
-  -webkit-appearance: none;
 }
 
 .container {
@@ -41,8 +47,7 @@ body {
 }
 
 .stream-item {
-  width: 300px;
-  margin: 20px;
+  margin: 3% ;
   transition: box-shadow .25s, -webkit-filter .5s;
   transition: box-shadow .25s, filter .5s;
   transition: box-shadow .25s, filter .5s, -webkit-filter .5s; 
@@ -57,15 +62,14 @@ body {
 
 .preview {
   box-sizing: border-box;
-  display: block;
-  width: 300px; 
+  display: flex;
+  width: 350px;
 }
 
 .content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   box-sizing: border-box;
+  display: flex;
+  width: 350px;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color .25s; 
 }
