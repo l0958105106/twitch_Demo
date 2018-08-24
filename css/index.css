@@ -31,20 +31,18 @@ body {
 }
 
 .container {
-  box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 auto;
-  width: 1000px; 
+  justify-content: center;
 }
 
 .stream-item {
-  box-sizing: border-box;
-  margin: 20px 1.66%;
+  width: 300px;
+  margin: 20px;
   transition: box-shadow .25s, -webkit-filter .5s;
   transition: box-shadow .25s, filter .5s;
   transition: box-shadow .25s, filter .5s, -webkit-filter .5s; 
