@@ -4,21 +4,27 @@ html, body {
   margin: 0;
   padding: 0; 
 }
-/*
+
 * :not(:body){
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-*/
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  }
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/swim.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  -moz-background-size: auto;        /*for Firefox*/
-  -webkit-background-size: 100% 100%;        /*for Google Chrome、Safari*/
-  -o-background-size: auto;        /*for Opera*/
+  -moz-background-size: cover;        /*for Firefox*/
+  -webkit-background-size: cover;        /*for Google Chrome、Safari*/
+  -o-background-size: cover;        /*for Opera*/
   background-size: cover;        /*for IE*/
 }
 
@@ -95,4 +101,14 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
-
+  
+/*-------- iPads (portrait and landscape) --------*/
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) {
+  body {
+  
+      background-attachment: initial;
+  
+      }
+  }
