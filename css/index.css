@@ -101,11 +101,11 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
-  
+
 /*-------- iPads (portrait and landscape) --------*/
   @media only screen 
-  and (min-device-width : 768px) 
-  and (max-device-width : 1024px) {
+  and (min-width : 768px) 
+  and (max-width : 1024px) {
   body {
   
       background-attachment: initial;
