@@ -4,19 +4,22 @@ html, body {
   margin: 0;
   padding: 0; 
 }
-/*
+
 * :not(:body){
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-*/
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/swim.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  -moz-background-size: auto;        /*for Firefox*/
+  -webkit-background-size: auto;        /*for Google Chrome、Safari*/
+  -o-background-size: auto;        /*for Opera*/
+  background-size: cover;        /*for IE*/
 }
 
 .page-header h1 {
@@ -29,8 +32,6 @@ body {
 .btnControl {
   display: table; 
   margin: 0 auto;
-  border-radius: 0;
-  -webkit-appearance: none;
 }
 
 .container {
