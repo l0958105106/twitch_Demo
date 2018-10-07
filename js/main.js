@@ -37,9 +37,16 @@ $(document).ready(function (){
     }
 
     $('.btn').click(function(){
-      var selected = $('input[name=options]:checked').val();
-      console.log(selected);
-      getAjax(selected);
+      var lang = this.value;
+
+      if(lang == 1){
+        getAjax(lang_tw);
+      }else if (lang == 2) {  
+        getAjax(lang_en);
+      } else if (lang ==3){
+        getAjax(lang_ko);
+      }
+
     });
 
     window.onload = getAjax(lang_tw);

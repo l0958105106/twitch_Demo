@@ -14,10 +14,15 @@ body {
 }
 
 .page-header h1 {
+  margin: 30px 0;
   font-style: normal;
   color: white;
   font-size: 40px;
   }
+
+.btn-group {
+  margin-bottom: 30px;
+}
 
 
 .container {
