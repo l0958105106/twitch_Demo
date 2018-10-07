@@ -2,6 +2,7 @@ $(document).ready(function (){
   var lang_ko = 'https://api.twitch.tv/kraken/streams/?language=ko&game=League%20of%20Legends';
   var lang_tw = 'https://api.twitch.tv/kraken/streams/?language=zh-tw&game=League%20of%20Legends';
   var lang_en = 'https://api.twitch.tv/kraken/streams/?language=en&game=League%20of%20Legends';
+
   var getAjax = function(language){
     $.ajax({
       url: language,
@@ -34,14 +35,12 @@ $(document).ready(function (){
         }
       });
     }
-  $("#btnZh").click(function () {
-    getAjax(lang_tw);
-  });
-  $("#btnKo").click(function () {
-    getAjax(lang_ko);
-  });
-  $("#btnEn").click(function () {
-    getAjax(lang_en);
-  });
-  window.onload = getAjax(lang_tw);
+
+    $('.btn').click(function(){
+      var selected = $('input[name=options]:checked').val();
+      console.log(selected);
+      getAjax(selected);
+    });
+
+    window.onload = getAjax(lang_tw);
 });
