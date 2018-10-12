@@ -93,9 +93,3 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
-
-.url {
-  display: block;
-  width: auto;
-  height: 200px;
-}
