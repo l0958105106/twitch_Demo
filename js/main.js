@@ -10,14 +10,11 @@ $(document).ready(function () {
       success: function (data) {
         $.each(data.streams, function (index, stream) {
 
-          var url = $('<a class="stream-item">');
-          url.prop( 'href' , stream.channel.url );
-
-          var avatar = $('<img class=" avatar rounded-circle">');
-          avatar.prop( 'src' , stream.channel.logo );
+          var avatar = $('<img class = " avatar rounded-circle">');
+          avatar.prop('src', stream.channel.logo);
 
           var preview = $('<img class="preview">');
-          preview.prop( 'src' , stream.preview.medium )
+          preview.prop('src', stream.preview.medium)
 
           var name = $('<p class="streamer">');
           name.html(stream.channel.display_name);
@@ -26,15 +23,15 @@ $(document).ready(function () {
           title.html(stream.channel.status);
 
           var streamText = $('<div class="streamText">');
-          streamText.append(title ,name);
+          streamText.append(title, name);
 
           var content = $('<div class="content">');
-          content.append(avatar,streamText);
+          content.append(avatar, streamText);
 
-          var layout = $('<div class="stream-item">');
-          layout.append(preview , content);
+          var layout = $('<a class = "stream-item">');
+          layout.prop('href', stream.channel.url).append(preview, content);
 
-            $(".container").append(layout);
+          $(".container").append(layout);
 
         })
 
@@ -65,9 +62,7 @@ $(document).ready(function () {
     });
   }
 
-
-
-  $('.btn-group .btn').click(function(e) {
+  $('.btn-group .btn').click(function (e) {
 
     e.preventDefault();
     $(".container").empty();
@@ -76,10 +71,8 @@ $(document).ready(function () {
 
   });
 
-  $('.stream-item').each(function(){
-    $(this).click(function(){
-
-    })
+  $(document).on('click', '.stream-item', function () {
+    var url = $(this).prop('href');
   })
 
   window.onload = getAjax(lang_tw);
