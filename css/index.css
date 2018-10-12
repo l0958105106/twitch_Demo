@@ -1,12 +1,13 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/swim.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  -moz-background-size: cover;        /*for Firefox*/
-  -webkit-background-size: cover;        /*for Google Chrome、Safari*/
-  -o-background-size: cover;        /*for Opera*/
-  background-size: cover;        /*for IE*/
+  background-attachment: fixed;        
+  background-size: cover;
 }
 
 .page-header {
@@ -36,7 +37,8 @@ body {
 }
 
 .stream-item {
-  margin: 2% ;
+  box-sizing: border-box;
+  margin: 2%;
   transition: box-shadow .25s, -webkit-filter .5s;
   transition: box-shadow .25s, filter .5s;
   transition: box-shadow .25s, filter .5s, -webkit-filter .5s; 
@@ -71,12 +73,12 @@ body {
   border-radius: 50%; 
 }
 
-.stream-text {
+.streamText {
   width: 200px;
   margin-left: 35px; 
 }
 
-.stream-text p {
+.streamText p {
     color: #FFF5EE;
     font-size: 15px;
     line-height: 25px;
@@ -86,5 +88,6 @@ body {
     overflow: hidden;
     text-overflow: ellipsis; 
   }
+
   
-  
+
