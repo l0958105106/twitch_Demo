@@ -45,6 +45,7 @@ body {
   transition: box-shadow .25s, -webkit-filter .5s;
   transition: box-shadow .25s, filter .5s;
   transition: box-shadow .25s, filter .5s, -webkit-filter .5s; 
+  text-decoration: none;
 }
 
 .stream-item:hover {
