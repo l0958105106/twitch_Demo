@@ -55,6 +55,7 @@ body {
   filter: contrast(125%) brightness(150%); 
   transform: translate(10px ,-10px);
   transition: all .25s linear;
+  text-decoration: none;
 }
 
 .preview {
